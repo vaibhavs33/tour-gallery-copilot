@@ -63,3 +63,15 @@ function App() {
     // Filter out the tour with the given ID and update the tours state
     setTours(tours.filter((tour) => tour.id !== id));
   };
+
+  // Task 4 - Add conditional rendering for loading and error states
+  
+  if (loading) {
+    // Display a loading message while the data is being fetched
+    return <h2>Loading...</h2>;
+  }
+
+  if (error) {
+    // Display an error message if there was an issue fetching the data
+    return <h2>Error: {error}</h2>;
+  }
